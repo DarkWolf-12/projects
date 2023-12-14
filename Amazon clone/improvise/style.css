@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-bar {
+  height: 60px;
+  /* width: 100%; */
+  background-color: rgb(12, 78, 51);
+  /* background-color:  #317554; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-logo {
+  height: 60px;
+  width: 120px;
+}
+.logo {
+  background-image: url(  logo.jpg );
+
+  height: 50px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 5px;
+}
+.border {
+  border: 3px solid transparent;
+}
+.border:hover {
+  border: 0.3px solid rgb(247, 242, 242);
+  padding: 1px;
+  margin: 3px;
+}
+.de {
+  margin-top: 8px;
+  color: rgb(196, 191, 191);
+  font-size: 0.8rem;
+  margin-left: 15px;
+  font-weight: 400;
+}
+.Ne {
+  font-size: 1.3rem;
+  color: white;
+  margin-left: 4px;
+  font-weight: 700;
+}
+.deliver-icon {
+  display: flex;
+  /* font-size: 30px; */
+}
+.location{
+  font-size: 20px;
+  color: #f3f3f3;
+}
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40px;
+  width: 660px;
+  background-color: aqua;
+  border-radius: 5px;
+  /* align-items: center; */
+  margin-top: 10px;
+}
+.search-select {
+  /* height: 40px; */
+  background-color: #f3f3f3;
+  width: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  border: none;
+}
+.search-bar {
+  width: 600px;
+  border: none;
+  font-size: 1rem;
+}
+.search-icon {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: rgb(233, 211, 183);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.language {
+  color: #f3f3f3;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sign-in {
+  margin-top: 10px;
+   
+  color: #f3f3f3;
+   
+ 
+}
+span {
+  font-size: 0.8rem;
+}
+.acc-ord {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+.cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartt{
+  font-size: 30px;
+  color: #ae4a4a;
+}
+.ca{
+  color: #f3f3f3;
+  margin-top: 20px;
+  font-weight: bolder;
+}

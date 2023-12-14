@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickable Pop-up Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .clickable-text {
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+
+    /* Pop-up window */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    /* Show the pop-up when clicked on the text */
+    .popup-active {
+      display: block;
+    }
+
+    /* Close button for the pop-up */
+    .close-btn {
+      position: absolute;
+      /* top: 10px; */
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="clickable-text" onclick="togglePopup()">Click me!</div>
+  <div class="popup" id="popup">
+    <span class="close-btn" onclick="togglePopup()">X</span>
+
+
+    
+    <!-- <h2>Pop-up Content</h2>
+    <p>This is a simple pop-up window that appears when you click the text.</p> -->
+  </div>
+
+  <script>
+    
+    function togglePopup() {
+     let popup = document.getElementById('popup');
+      popup.classList.toggle('popup-active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Button</title>
+    <style>
+        
+        .dropdown{
+            margin: 0px;
+
+        }
+        .dropdown-content {
+            margin: 5px;
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 500px;
+            min-height: 400px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .signin{
+            padding: 5px;
+            height: 30px;
+            width: 200px;
+            background-color: yellow;
+            text-align: center;
+        }
+        .ps {
+            font-size: 0.7rem;
+            text-align: left;
+            color: white;
+        }
+        .pa {
+            font-size: 0.9rem;
+            text-align: left;
+            color: white;
+
+        }
+        button{
+            background-color: rgb(7, 122, 84);
+            height: 58px;
+            width: auto;
+            border: 1px solid white;
+        }
+       
+ </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <button>
+        <p class="ps"> Hello, sign in </p>
+        <p class="pa"> Account & lists </p>
+    </button>
+    <div class="dropdown-content">
+        <div class ="signin"> 
+            <a href="#">Sign in</a> 
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

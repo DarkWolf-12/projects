@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Selection</title>
+    <style>
+         
+        select {
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+ 
+
+ 
+<select  class="search-select" onchange="handleSelection()">all
+    <option value="apple">apple</option>
+    <option value="orange">Orange</option>
+    <option value="banana">Banana</option>
+    <option value="grape">Grape</option>
+</select>
+
+ 
+<p id="selectedFruit"></p>
+
+<script>
+   
+    function handleSelection() {
+         
+        let selectedValue = document.getElementById("fruitDropdown").value;
+
+        
+        document.getElementById("selectedFruit").innerHTML = '';
+    }
+</script>
+
+</body>
+</html>
