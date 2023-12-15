@@ -128,3 +128,23 @@ span {
   margin-top: 20px;
   font-weight: bolder;
 }
+
+/*---For main-----------------------------*/
+
+.sub-bar{
+  height: 40px;
+  /* width: 100%; */
+  background-color: rgb(32, 120, 83);
+  /* background-color:  #317554; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+}
+.all{
+  margin-left: 10px;
+}
+i,.all{font-weight: 900; font-size: 15px;}
+.sell{
+  margin-right: 30rem;
+}
