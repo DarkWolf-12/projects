@@ -11,6 +11,7 @@
       referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="acc-popup.css">
       <link rel="stylesheet" href="side-bar.css">
+      <link rel="stylesheet" href="backgroung-slide.css">
   </head>
   <body>
     <header>
@@ -161,7 +162,25 @@
         <div class="sell"  >Sell</div>
     </div>
 
+    <div id="image-slider">
+      <div id="slide-container">
+          <div class="slide">
+              <img class="img" src="image/61CiqVTRBEL._SX3000_.jpg " alt="Landscape Image 1">
+          </div>
+          <div class="slide">
+              <img class="img" src="image/61lwJy4B8PL._SX3000_.jpg " alt="Landscape Image 2">
+          </div>
+          <div class="slide">
+              <img class="img" src="image/81KkrQWEHIL._SX3000_.jpg" alt="Landscape Image 3">
+          </div>
+          <div class="slide">
+            <img class="img" src="image/71Ie3JXGfVL._SX3000_.jpg " alt="Landscape Image 3">
+        </div>
+      </div>
+  </div>
 
+  <button id="prev" onclick="changeSlide(-1)">‹</button>
+  <button id="next" onclick="changeSlide(1)">›</button>
 
    </main>
 

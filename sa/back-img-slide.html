@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #image-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #slide-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            box-sizing: content-box;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+        .img{
+        height: 500px;
+        width:100%;
+        box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="image-slider">
+        <div id="slide-container">
+            <div class="slide">
+                <img class="img" src="image/61CiqVTRBEL._SX3000_.jpg " alt="Landscape Image 1">
+            </div>
+            <div class="slide">
+                <img class="img" src="image/61lwJy4B8PL._SX3000_.jpg " alt="Landscape Image 2">
+            </div>
+            <div class="slide">
+                <img class="img" src="image/81KkrQWEHIL._SX3000_.jpg " alt="Landscape Image 3">
+            </div>
+        </div>
+    </div>
+
+    <button id="prev" onclick="changeSlide(-1)">‹</button>
+    <button id="next" onclick="changeSlide(1)">›</button>
+
+    <script>
+        const slideContainer = document.getElementById('slide-container');
+        const slides = document.querySelectorAll('.slide');
+        const slideWidth = slides[0].offsetWidth;
+        let currentSlideIndex = 0;
+
+        function changeSlide(direction) {
+            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+            const translateValue = -currentSlideIndex * slideWidth;
+            slideContainer.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        
+        setInterval(() => changeSlide(1), 5000);
+    </script>
+
+</body>
+</html>

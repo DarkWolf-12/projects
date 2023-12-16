@@ -28,3 +28,20 @@ function closeMenu() {
     document.getElementById("menuButton").style.marginLeft = "0";
     document.getElementById("content").style.marginLeft = "0";
 }
+
+//for slide background
+
+
+const slideContainer = document.getElementById('slide-container');
+        const slides = document.querySelectorAll('.slide');
+        const slideWidth = slides[0].offsetWidth;
+        let currentSlideIndex = 0;
+
+        function changeSlide(direction) {
+            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+            const translateValue = -currentSlideIndex * slideWidth;
+            slideContainer.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        
+        setInterval(() => changeSlide(1), 5000);
