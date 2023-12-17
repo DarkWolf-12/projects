@@ -11,7 +11,7 @@
       referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="acc-popup.css">
       <link rel="stylesheet" href="side-bar.css">
-      <link rel="stylesheet" href="backgroung-slide.css">
+      <link rel="stylesheet" href="hero-section.css">
   </head>
   <body>
     <header>
@@ -161,28 +161,70 @@
         <div class="gift">Gift Card</div>
         <div class="sell"  >Sell</div>
     </div>
+</main>
 
-    <div id="image-slider">
-      <div id="slide-container">
-          <div class="slide">
-              <img class="img" src="image/61CiqVTRBEL._SX3000_.jpg " alt="Landscape Image 1">
-          </div>
-          <div class="slide">
-              <img class="img" src="image/61lwJy4B8PL._SX3000_.jpg " alt="Landscape Image 2">
-          </div>
-          <div class="slide">
-              <img class="img" src="image/81KkrQWEHIL._SX3000_.jpg" alt="Landscape Image 3">
-          </div>
-          <div class="slide">
-            <img class="img" src="image/71Ie3JXGfVL._SX3000_.jpg " alt="Landscape Image 3">
-        </div>
+    <div class="hero-section">
+      <div id="background-slider">
+        <img class="slide" src="image/61CiqVTRBEL._SX3000_.jpg" alt="Background Image 1">
+        <img class="slide" src="image/61lwJy4B8PL._SX3000_.jpg" alt="Background Image 2">
+        <img class="slide" src="image/71Ie3JXGfVL._SX3000_.jpg" alt="Background Image 3">
+    </div>
+
+    <button id="prev" onclick="changeSlide(-1)">‹</button>
+    <button id="next" onclick="changeSlide(1)">›</button>
+
+<div class="item-lists">
+
+      <div class="item1 back ">
+ <h3 class="item-head" >Toys under $25</h3>
+ <img class="item-image-prop" src="image/item-2.jpg" alt=""><br>
+  <a  href="#">Shop Now</a>
       </div>
-  </div>
+      <div class="item2 back">
+        <h3 class="item-head">CPU under $35</h3>
+       <img class="item-image-prop" src="image/item-3.jpg " alt=""> <br>
+       <a  href="#">   Shop Now   </a>
+              </div>
+              
+              <div class="item3 back">
+                <h3 class="item-head">Laptops under $2000</h3>
+                <img class="item-image-prop" src="image/item4.jpg " alt=""><br>
+                <a href="#">Shop Now</a>
+                      </div>
+                
+                      <div class="item1 back ">
+                        <h3 class="item-head" >Toys under $25</h3>
+                        <img class="item-image-prop" src="image/item-2.jpg" alt=""><br>
+                         <a  href="#">Shop Now</a>
+                             </div>
+                             <div class="item2 back">
+                               <h3 class="item-head">CPU under $35</h3>
+                              <img class="item-image-prop" src="image/item-3.jpg " alt=""> <br>
+                              <a  href="#">   Shop Now   </a>
+                                     </div>
+                                     
+                                     <div class="item3 back">
+                                       <h3 class="item-head">Laptops under $2000</h3>
+                                       <img class="item-image-prop" src="image/item4.jpg " alt=""><br>
+                                       <a href="#">Shop Now</a>
+                                             </div>
+                                       
 
-  <button id="prev" onclick="changeSlide(-1)">‹</button>
-  <button id="next" onclick="changeSlide(1)">›</button>
 
-   </main>
+
+
+
+
+
+</div>
+
+
+
+
+    </div>
+ 
+
+ 
 
 
     <script src="amazon.js" > </script>

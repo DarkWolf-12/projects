@@ -6,6 +6,7 @@ function handleSelection() {
     document.getElementById("selectedFruit").innerHTML = '';
 }
 
+//for side
 
 function toggleMenu() {
     var sideMenu = document.getElementById("mySideMenu");
@@ -30,18 +31,24 @@ function closeMenu() {
 }
 
 //for slide background
+const backgroundSlider = document.getElementById('background-slider');
+const images = document.querySelectorAll('#background-slider img');
+let currentImageIndex = 0;
 
-
-const slideContainer = document.getElementById('slide-container');
-        const slides = document.querySelectorAll('.slide');
-        const slideWidth = slides[0].offsetWidth;
-        let currentSlideIndex = 0;
-
-        function changeSlide(direction) {
-            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
-            const translateValue = -currentSlideIndex * slideWidth;
-            slideContainer.style.transform = `translateX(${translateValue}px)`;
+function showImage(index) {
+    images.forEach((image, i) => {
+        if (i === index) {
+            image.style.opacity = 1;
+        } else {
+            image.style.opacity = 0;
         }
+    });
+}
 
-        
-        setInterval(() => changeSlide(1), 5000);
+function changeSlide(direction) {
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    showImage(currentImageIndex);
+}
+
+// Change background every 5 seconds (5000 milliseconds)
+setInterval(() => changeSlide(1), 5000);
