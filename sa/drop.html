@@ -1,101 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cascading Dropdown</title>
-  <style>
-    /* Style for the dropdown container */
-    .dropdown {
-      display: inline-block;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Animation - Left to Right</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://placekitten.com/1200/800') repeat-x; /* Repeat background image horizontally */
+            animation: slideBackground 10s linear infinite; /* Adjust duration as needed */
+        }
 
-    /* Style for the dropdown content */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+        @keyframes slideBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
 
-    /* Style for the dropdown items */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Style for the dropdown items on hover */
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Show the dropdown content when the dropdown button is clicked */
-    .dropdown.active .dropdown-content {
-      display: block;
-    }
-  </style>
+        #content {
+            text-align: center;
+            z-index: 1;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
-<div class="dropdown" id="dropdown1">
-  <button class="dropbtn" onclick="toggleDropdown('dropdown1')">Select Category</button>
-  <div class="dropdown-content">
-    <a href="#" onclick="selectOption('option1')">Option 1</a>
-    <a href="#" onclick="selectOption('option2')">Option 2</a>
-    <a href="#" onclick="selectOption('option3')">Option 3</a>
-  </div>
-</div>
-
-<div class="dropdown" id="dropdown2">
-  <button class="dropbtn" onclick="toggleDropdown('dropdown2')">Select Subcategory</button>
-  <div class="dropdown-content">
-    <!-- Content for the second dropdown will be dynamically updated based on the selected option in the first dropdown -->
-  </div>
-</div>
-
-<script>
-  function toggleDropdown(dropdownId) {
-    var dropdown = document.getElementById(dropdownId);
-    dropdown.classList.toggle('active');
-  }
-
-  function selectOption(option) {
-    // Function to be called when an option is selected in the first dropdown
-    var dropdown2 = document.getElementById('dropdown2');
-    var dropdown2Content = dropdown2.querySelector('.dropdown-content');
-
-    // Clear the existing content in the second dropdown
-    dropdown2Content.innerHTML = '';
-
-    // Add new content based on the selected option in the first dropdown
-    if (option === 'option1') {
-      dropdown2Content.innerHTML = `
-        <a href="#">Suboption 1.1</a>
-        <a href="#">Suboption 1.2</a>
-        <a href="#">Suboption 1.3</a>
-      `;
-    } else if (option === 'option2') {
-      dropdown2Content.innerHTML = `
-        <a href="#">Suboption 2.1</a>
-        <a href="#">Suboption 2.2</a>
-        <a href="#">Suboption 2.3</a>
-      `;
-    } else if (option === 'option3') {
-      dropdown2Content.innerHTML = `
-        <a href="#">Suboption 3.1</a>
-        <a href="#">Suboption 3.2</a>
-        <a href="#">Suboption 3.3</a>
-      `;
-    }
-
-    // Close the first dropdown after an option is selected
-    toggleDropdown('dropdown1');
-  }
-</script>
+    <div id="content">
+        <h1>Main Content</h1>
+        <p>This is the main content of the page.</p>
+    </div>
 
 </body>
 </html>

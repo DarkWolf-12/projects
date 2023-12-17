@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+  body{
+background-color: antiquewhite;
+}
 .nav-bar {
   height: 60px;
   /* width: 100%; */
@@ -10,6 +13,7 @@
   /* background-color:  #317554; */
   display: flex;
   justify-content: space-evenly;
+  position
 }
 .nav-logo {
   height: 60px;

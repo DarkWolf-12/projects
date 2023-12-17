@@ -1,3 +1,9 @@
+ 
+ 
+
+
+
+
 function handleSelection() {
          
     let selectedValue = document.getElementById("fruitDropdown").value;
