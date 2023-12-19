@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Animation - Left to Right</title>
+    <title>Sliding Box with Finite Images</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,36 +11,95 @@
             padding: 0;
             box-sizing: border-box;
             overflow: hidden;
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url('https://placekitten.com/1200/800') repeat-x; /* Repeat background image horizontally */
-            animation: slideBackground 10s linear infinite; /* Adjust duration as needed */
+            height: 100vh;
+            background-color: #f4f4f4;
         }
 
-        @keyframes slideBackground {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 0;
-            }
+        #sliding-box {
+            position: relative;
+            width: 80%; /* Adjust the width as needed */
+            max-width: 600px;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 8px;
         }
 
-        #content {
-            text-align: center;
-            z-index: 1;
+        .images-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image {
+            flex:0 0 100px;
+            box-sizing: border-box;
+        }
+
+        .image img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            font-size: 18px;
+            background-color: #007BFF;
             color: #fff;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div id="content">
-        <h1>Main Content</h1>
-        <p>This is the main content of the page.</p>
+    <div id="sliding-box">
+        <div class="images-container">
+            <div class="image"><img src="https://placekitten.com/600/400" alt="Image 1"></div>
+            <div class="image"><img src="https://placekitten.com/601/400" alt="Image 2"></div>
+            <div class="image"><img src="https://placekitten.com/602/400" alt="Image 3"></div>
+            <div class="image"><img src="https://placekitten.com/603/400" alt="Image 4"></div>
+            <div class="image"><img src="https://placekitten.com/604/400" alt="Image 5"></div>
+        </div>
     </div>
+
+    <button id="prev" onclick="changeImage(-1)">‹</button>
+    <button id="next" onclick="changeImage(1)">›</button>
+
+    <script>
+        const slidingBox = document.getElementById('sliding-box');
+        const imagesContainer = document.querySelector('.images-container');
+        const imageWidth = slidingBox.offsetWidth;
+        let currentImageIndex = 0;
+        let slideInterval;
+
+        function changeImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + imagesContainer.children.length) % imagesContainer.children.length;
+            const translateValue = -currentImageIndex * imageWidth;
+            imagesContainer.style.transform = `translateX(${translateValue}px)`;
+
+            
+            if (currentImageIndex === imagesContainer.children.length - 1) {
+                clearInterval(slideInterval);
+            }
+        }
+
+        slideInterval = setInterval(() => changeImage(1));
+        
+    </script>
 
 </body>
 </html>
