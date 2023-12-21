@@ -147,6 +147,7 @@ span {
 }
 .all{
   margin-left: 10px;
+  cursor: pointer;
 }
 i,.all{font-weight: 900; font-size: 15px;}
 .sell{

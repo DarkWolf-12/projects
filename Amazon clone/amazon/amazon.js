@@ -15,13 +15,14 @@ function handleSelection() {
 //for side
 
 function toggleMenu() {
-    var sideMenu = document.getElementById("mySideMenu");
+    let sideMenu = document.getElementById("mySideMenu");
     if (sideMenu.style.width === "250px") {
         closeMenu();
     } else {
         openMenu();
     }
 }
+ 
 
 function openMenu() {
     document.getElementById("mySideMenu").style.width = "350px";
@@ -70,7 +71,7 @@ function setLanguage(languageCode) {
      window.onscroll = function() {
         showBackToTopButton();
     };
-
+}
     function showBackToTopButton() {
         var button = document.getElementById("back-to-top");
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
