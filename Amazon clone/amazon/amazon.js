@@ -1,41 +1,4 @@
  
- 
-
-
-
-
-function handleSelection() {
-         
-    let selectedValue = document.getElementById("fruitDropdown").value;
-
-    
-    document.getElementById("selectedFruit").innerHTML = '';
-}
-
-//for side
-
-function toggleMenu() {
-    let sideMenu = document.getElementById("mySideMenu");
-    if (sideMenu.style.width === "250px") {
-        closeMenu();
-    } else {
-        openMenu();
-    }
-}
- 
-
-function openMenu() {
-    document.getElementById("mySideMenu").style.width = "350px";
-    document.getElementById("menuButton").style.marginLeft = "360px";
-    document.getElementById("content").style.marginLeft = "250px";
-    
-}
-
-function closeMenu() {
-    document.getElementById("mySideMenu").style.width = "0";
-    document.getElementById("menuButton").style.marginLeft = "0";
-    document.getElementById("content").style.marginLeft = "0";
-}
 
 //for slide background
 const backgroundSlider = document.getElementById('background-slider');
@@ -66,8 +29,8 @@ function setLanguage(languageCode) {
     // Implement the logic to set the selected language
     console.log('Selected language:', languageCode);
 
-
-     // Show the "Back to Top" button when scrolling down
+ 
+     // Show the "Back to Top" button when scrolling down at footer
      window.onscroll = function() {
         showBackToTopButton();
     };
@@ -87,19 +50,6 @@ function setLanguage(languageCode) {
         document.documentElement.scrollTop = 0;  
     }
 
-    /// code for search bar
+ 
 
-    function filterItems() {
-        var query = document.querySelector(".search-bar").value.toLowerCase();
-        var items = document.getElementsByClassName("item");
-
-        for (var i = 0; i < items.length; i++) {
-            var itemName = items[i].getAttribute("data-name").toLowerCase();
-            var displayStyle = itemName.includes(query) ? "block" : "none";
-            items[i].style.display = displayStyle;
-        }
-    }
-
-    function showDetails(itemName) {
-        // Redirect to a separate page with item details
-        window.location.href = 'details.html?item=' + encodeURIComponent(itemName);
+    
