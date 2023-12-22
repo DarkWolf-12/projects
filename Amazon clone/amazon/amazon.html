@@ -42,7 +42,7 @@
             <option value="Mobile">Mobile</option>
             <option value="computer">Computers</option>
         </select>
-          <input type="text" placeholder="Search Amazon" class="search-bar" />
+        <input type="text" class="search-bar" placeholder="Search for an item" oninput="filterItems()">
           <div class="search-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -179,18 +179,18 @@
 
 <div class="item-lists1">
 
-      <div class="item1 back ">
+      <div class="item1 back  item">
  <h3 class="item-head" >Toys under $25</h3>
  <img class="item-image-prop" src="image/item-2.jpg" alt=""><br>
   <a  href="#">Shop Now</a>
       </div>
-      <div class="item2 back">
+      <div class="item2 back item">
         <h3 class="item-head">CPU under $35</h3>
        <img class="item-image-prop" src="image/item-3.jpg " alt=""> <br>
        <a  href="#">   Shop Now   </a>
               </div>
               
-              <div class="item3 back">
+              <div class="item3 back item" data-name="Laptop" onclick="showDetails('Laptop')">
                 <h3 class="item-head">Laptops under $2000</h3>
                 <img class="item-image-prop" src="image/item4.jpg " alt=""><br>
                 <a href="#">Shop Now</a>

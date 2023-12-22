@@ -86,3 +86,20 @@ function setLanguage(languageCode) {
         
         document.documentElement.scrollTop = 0;  
     }
+
+    /// code for search bar
+
+    function filterItems() {
+        var query = document.querySelector(".search-bar").value.toLowerCase();
+        var items = document.getElementsByClassName("item");
+
+        for (var i = 0; i < items.length; i++) {
+            var itemName = items[i].getAttribute("data-name").toLowerCase();
+            var displayStyle = itemName.includes(query) ? "block" : "none";
+            items[i].style.display = displayStyle;
+        }
+    }
+
+    function showDetails(itemName) {
+        // Redirect to a separate page with item details
+        window.location.href = 'details.html?item=' + encodeURIComponent(itemName);
