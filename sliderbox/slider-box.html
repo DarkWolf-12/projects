@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <style>
+   
+    .slider {
+      padding-left: 20px;
+      margin-right: 30px;
+    }
+
+    .slider-item {
+      padding: 20px;
+      text-align: center;
+      background-color: #d1cccc;
+    }
+
+    .slick-prev, .slick-next {
+  
+      font-size: 30px;
+      color: #0a0909;
+      background-color: black;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slider-item"><img src="item-1.jpg" alt="">only 1 </div>
+  <div class="slider-item"><img src="item-2.jpg" alt="">only 2</div>
+  <div class="slider-item"><img src="item-3.jpg" alt="">only 3</div>
+  <div class="slider-item"><img src="item4.jpg" alt="">only 4</div>
+  <div class="slider-item"><img src="item5.jpg" alt="">only 5</div>
+  <div class="slider-item"><img src="item6.jpg" alt="">only 6</div>
+  <div class="slider-item"><img src="item-1.jpg" alt="">only 7</div>
+  <div class="slider-item"><img src="item-2.jpg" alt="">only 8</div>
+  <div class="slider-item"><img src="item-3.jpg" alt="">only 9</div>
+  <div class="slider-item"><img src="item4.jpg" alt="">only 10</div>
+  <div class="slider-item"><img src="item5.jpg" alt="">only 11</div>
+  <div class="slider-item"><img src="item6.jpg" alt="">only 12</div>
+  <div class="slider-item"><img src="item-1.jpg" alt="">only 1 </div>
+  <div class="slider-item"><img src="item-2.jpg" alt="">only 2</div>
+  <div class="slider-item"><img src="item-3.jpg" alt="">only 3</div>
+  <div class="slider-item"><img src="item4.jpg" alt="">only 4</div>
+  <div class="slider-item"><img src="item5.jpg" alt="">only 5</div>
+  <div class="slider-item"><img src="item6.jpg" alt="">only 6</div>
+  <div class="slider-item"><img src="item-1.jpg" alt="">only 7</div>
+  <div class="slider-item"><img src="item-2.jpg" alt="">only 8</div>
+  <div class="slider-item"><img src="item-3.jpg" alt="">only 9</div>
+  <div class="slider-item"><img src="item4.jpg" alt="">only 10</div>
+  <div class="slider-item"><img src="item5.jpg" alt="">only 11</div>
+  <div class="slider-item"><img src="item6.jpg" alt="">only 12</div>
+  
+  
+  
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      slidesToShow: 10,  // Number of slides to show
+      slidesToScroll: 1,  // Number of slides to scroll
+      autoplay: true,
+      autoplaySpeed: 800,  // Autoplay speed in milliseconds
+      variableWidth: true,
+      prevArrow: '<button type="button" class="slick-prev">&#9665;</button>',  // Custom left arrow
+      nextArrow: '<button type="button" class="slick-next">&#9655;</button>'   // Custom right arrow
+    });
+  });
+</script>
+
+</body>
+</html>
