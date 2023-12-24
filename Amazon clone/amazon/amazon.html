@@ -2,19 +2,21 @@
 <html lang="en">
   <head>
     <title>Amazon</title>
-    <link rel="stylesheet" href="top-2-header.css" />
+    <link rel="stylesheet" href="css-for-amazon/amazon.css" />
+    <link rel="stylesheet" href="css-for-amazon/top-2-header.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="hero-section.css">
+      <link rel="stylesheet" href="css-for-amazon/hero-section.css">
        
-      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="css-for-amazon/footer.css">
   </head>
   <body>
-    <my-header></my-header>
+    <my-header> <script src="top-2-bars.js" > </script></my-header>
+
     <div class="hero-section">
       <div id="background-slider">
         <img class="slide" src="image/61CiqVTRBEL._SX3000_.jpg" alt="Background Image 1">
@@ -33,9 +35,9 @@
   <a  href="#">Shop Now</a>
       </div>
       <div class="item back">
-        <h3 class="item-head">CPU under $35</h3>
+        <h3 class="item-head">Accessories Deals $30</h3>
        <img class="item-image-prop" src="image/item-3.jpg " alt=""> <br>
-       <a  href="#">   Shop Now   </a>
+       <a  href="http://127.0.0.1:5500/Amazon%20clone/amazon/lap-item.html">   Shop Now   </a>
               </div>
               
               <div class="item  back" data-name="Laptop" onclick="showDetails('Laptop')">
@@ -72,86 +74,14 @@
  
 <!-- this content fter this is for footer section-->
 
-<footer>
-  <button onclick="scrollToTop()" id="back-to-top">Back to Top</button>
-<div id="footer">
-
-<div class="footer-list1">
-  
-  <div class="foot1-1">
-    <h3 class="foooter-list1heading">Get to Know Us</h3>  
-    <span> 
-     <a href=""> <p class="foot1-text"> Careers</p></a>
-     <a href=""><p class="foot1-text">Blog</p></a>
-     <a href=""><p class="foot1-text">About Amazon</p></a>
-     <a href=""><p class="foot1-text">Investor Relations</p></a>
-     <a href=""><p class="foot1-text">Amazon Devices</p></a>
-     <a href=""><p class="foot1-text">Amazon Science</p></a><br>
-  
-  </span>
-</div>
-
-  <div class="foot1-2">
-      <h3 class="foooter-list1heading2">Make Money with Us</h3>    
-      <span> 
-          <a href=""><p class="foot1-text">Sell products on Amazon</p></a>
-          <a href=""><p class="foot1-text">Sell on Amazon Business</p></a>
-          <a href=""><p class="foot1-text">Sell apps on Amazon</p></a>
-          <a href=""><p class="foot1-text">Become an Affiliate</p></a>
-          <a href=""><p class="foot1-text">Advertise Your Products</p></a>
-          <a href=""><p class="foot1-text">Self-Publish with Us</p></a>
-          <a href=""><p class="foot1-text">Host an Amazon Hub</p></a>
-          <a href=""><p class="foot1-text">› See More Make Money with Us</p></a><br>
-       </span>
-
-    </div>
-    <div class="foot1-3">
-      <h3 class="foooter-list1heading3">Amazon Payment Products</h3>    
-      <a href=""><p class="foot1-text">Amazon Business Card</p></a>
-      <a href=""><p class="foot1-text">Shop with Points</p></a>
-      <a href=""><p class="foot1-text">Reload Your Balance</p></a>
-      <a href=""><p class="foot1-text">Amazon Currency Converter</p></a>
-    </div>
-    <div class="foot1-4">
-      <h3 class="foooter-list1heading">Let Us Help You</h3>    
-      <a href=""><p class="foot1-text">Your Account</p></a>
-      <a href=""><p class="foot1-text">Your Orders</p></a>
-      <a href=""><p class="foot1-text">Shipping Rates & Policies</p></a>
-      <a href=""><p class="foot1-text" >Returns & Replacements</p></a>
-      <a href=""><p class="foot1-text">Manage Your Content and Devices</p></a>
-      <a href=""><p class="foot1-text">Amazon Assistant</p></a>
-      <a href=""><p class="foot1-text">Help</p></a>
-    </div>
-</div>
-<div class="foot-middle">
-  <img class="foot-logo" src="/Amazon clone/amazon/logo.PNG" alt="">
-
-  <div class="dropdown">
-      <button class="dropbtn">  English</button>
-      <div class="dropdown-content">
-          <a href="#" onclick="setLanguage('en')">English</a>
-          <a href="#" onclick="setLanguage('fr')">French</a>
-          <a href="#" onclick="setLanguage('es')">Spanish</a>
-         
-      </div>
-  </div>
-  <button class="dropbtn"> $ USD - U.S.Dollor</button>
-  <button class="dropbtn">UNITED STATE</button>
-</div>
-
-<p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
-  <p>
-      <a href="#">Privacy Notice</a> |
-      <a href="#">Conditions of Use</a> |
-      <a href="#">Contact Us</a>
-  </p>
-</div>
-</footer>
+<my-footer>
+ 
+</my-footer>
 
 
  
 
-    <script src="top-2-bars.js"></script>
-    <script src="amazon.js" > </script>
+    <script src="js-for-amazon/amazon.js"></script>
+   
   </body>
 </html>

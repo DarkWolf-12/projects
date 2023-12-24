@@ -157,6 +157,89 @@ class myHeader extends HTMLElement{
   }
   customElements.define("my-header",myHeader);
 
+// for footer
+
+class myFooter extends HTMLElement{
+  connectedCallback(){
+      this.innerHTML = ` 
+      <button onclick="scrollToTop()" id="back-to-top">Back to Top</button>
+      <div id="footer">
+      
+      <div class="footer-list1">
+        
+        <div class="foot1-1">
+          <h3 class="foooter-list1heading">Get to Know Us</h3>  
+          <span> 
+           <a href=""> <p class="foot1-text"> Careers</p></a>
+           <a href=""><p class="foot1-text">Blog</p></a>
+           <a href=""><p class="foot1-text">About Amazon</p></a>
+           <a href=""><p class="foot1-text">Investor Relations</p></a>
+           <a href=""><p class="foot1-text">Amazon Devices</p></a>
+           <a href=""><p class="foot1-text">Amazon Science</p></a><br>
+        
+        </span>
+      </div>
+      
+        <div class="foot1-2">
+            <h3 class="foooter-list1heading2">Make Money with Us</h3>    
+            <span> 
+                <a href=""><p class="foot1-text">Sell products on Amazon</p></a>
+                <a href=""><p class="foot1-text">Sell on Amazon Business</p></a>
+                <a href=""><p class="foot1-text">Sell apps on Amazon</p></a>
+                <a href=""><p class="foot1-text">Become an Affiliate</p></a>
+                <a href=""><p class="foot1-text">Advertise Your Products</p></a>
+                <a href=""><p class="foot1-text">Self-Publish with Us</p></a>
+                <a href=""><p class="foot1-text">Host an Amazon Hub</p></a>
+                <a href=""><p class="foot1-text">› See More Make Money with Us</p></a><br>
+             </span>
+      
+          </div>
+          <div class="foot1-3">
+            <h3 class="foooter-list1heading3">Amazon Payment Products</h3>    
+            <a href=""><p class="foot1-text">Amazon Business Card</p></a>
+            <a href=""><p class="foot1-text">Shop with Points</p></a>
+            <a href=""><p class="foot1-text">Reload Your Balance</p></a>
+            <a href=""><p class="foot1-text">Amazon Currency Converter</p></a>
+          </div>
+          <div class="foot1-4">
+            <h3 class="foooter-list1heading">Let Us Help You</h3>    
+            <a href=""><p class="foot1-text">Your Account</p></a>
+            <a href=""><p class="foot1-text">Your Orders</p></a>
+            <a href=""><p class="foot1-text">Shipping Rates & Policies</p></a>
+            <a href=""><p class="foot1-text" >Returns & Replacements</p></a>
+            <a href=""><p class="foot1-text">Manage Your Content and Devices</p></a>
+            <a href=""><p class="foot1-text">Amazon Assistant</p></a>
+            <a href=""><p class="foot1-text">Help</p></a>
+          </div>
+      </div>
+      <div class="foot-middle">
+        <img class="foot-logo" src="/Amazon clone/amazon/logo.PNG" alt="">
+      
+        <div class="dropdown">
+            <button class="dropbtn">  English</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="setLanguage('en')">English</a>
+                <a href="#" onclick="setLanguage('fr')">French</a>
+                <a href="#" onclick="setLanguage('es')">Spanish</a>
+               
+            </div>
+        </div>
+        <button class="dropbtn"> $ USD - U.S.Dollor</button>
+        <button class="dropbtn">UNITED STATE</button>
+      </div>
+      
+      <p>&copy; 2023 Your Company Name. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Notice</a> |
+            <a href="#">Conditions of Use</a> |
+            <a href="#">Contact Us</a>
+        </p>
+      </div>
+
+      `
+    }
+  }
+  customElements.define("my-footer",myFooter);
   // for nav bar and all option
 
   function handleSelection() {
