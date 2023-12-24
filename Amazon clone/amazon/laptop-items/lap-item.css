@@ -1,0 +1,74 @@
+/* for the slide content */
+.slider {
+    padding-left: 20px;
+    margin-right: 30px;
+height: 300px;
+width: 100%;  
+ 
+box-sizing: content-box;
+}
+
+  .slider-item {
+    padding: 20px;
+    text-align: center;
+    background-color: #d2c5c5;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+  }
+
+  .slick-prev, .slick-next {
+
+    font-size: 30px;
+    color: #0a0909;
+    background-color: rgb(128, 110, 110);
+  }
+
+/* for the hero section */
+.af-sub-bar{
+    height: 30px;
+    width: 100%;
+    
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    
+}
+a{
+    color: black;
+    padding: 5px;
+}
+.content-box{
+    display: flex;
+    box-sizing: content-box;
+}
+.lef-side-content{
+    height: 600px;
+    width: 20%;
+    background-color: blue;
+}
+.rig-side-content{
+    height: 600px;
+    width:80%;
+    background-color: aquamarine;
+    
+    
+}
+/* css for the right side item in a cointainer box */
+.rig-container-box-row1{
+ display: flex;
+
+
+}
+.rig-container-box-row2{
+    display: flex;
+   
+   
+   }
+.shape{
+    width :250px;
+    height: 250px;
+    background-color: rgb(150, 135, 135);
+    margin: 2px;
+    border: 1px solid red;
+}
