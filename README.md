@@ -1,2 +1,2 @@
 # projects
- we building
+ we building slidebar
